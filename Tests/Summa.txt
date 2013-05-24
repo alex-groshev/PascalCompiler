@@ -1,0 +1,8 @@
+program Summa;
+var
+  a, b, c: integer;
+begin
+  a:=3;
+  b:=5;
+  c:=a + b;
+end.

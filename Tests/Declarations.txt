@@ -1,0 +1,43 @@
+program Decls;
+
+type
+  TMyInteger = integer;
+
+var
+  a: TMyInteger;
+  b: integer;
+
+const
+  MIN = 1;
+  MAX = 2;
+
+var
+  Mas: array [MIN..MAX] of integer;
+
+type
+  TMyMas = array [MIN..MAX] of integer;
+
+procedure I_eat_mas(M: TMyMas);
+const MasLowIndex = MIN;
+const MasHighIndex = MAX; 
+var
+  i: integer;
+begin
+  i:=MasLowIndex;
+  while i <> MasHighIndex do
+  begin
+    M[i]:=i;
+    i:=i+1;
+  end;  
+end;
+
+var
+  BIGMAS: TMyMas;
+
+begin
+  a:=3;
+  b:=a;
+  Mas[MIN]:=MIN;
+  Mas[MAX]:=MAX;
+  I_eat_mas(BIGMAS);
+end.
